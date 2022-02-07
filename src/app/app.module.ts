@@ -10,11 +10,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { HomeComponent } from './home/home.component';
     MatDialogModule,
     MatSnackBarModule,
     MatIconModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

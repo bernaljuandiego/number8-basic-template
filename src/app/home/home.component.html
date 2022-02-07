@@ -12,13 +12,13 @@
                                 <span>{{product.Name}}</span>
                                 <div class="d-flex flex-row align-items-center">
                                     <h6 class="mb-0 text1">${{product.Price}}</h6>
-                                    <h6 class="mb-0 ms-3 text2">${{product.Price}}</h6>
+                                    <h6 class="mb-0 ms-3 text2">${{product['Retail Price']}}</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-4 justify-content-center align-self-center boton1 ">
-                        <button type="button" class="btn btn-success btn-sm">View Details</button>
+                        <button type="button" class="btn btn-success btn-sm" routerLink="/product/{{product.ProductID}}">View Details</button>
                     </div>
                 </div>
             </div>

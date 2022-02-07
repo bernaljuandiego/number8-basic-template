@@ -35,4 +35,9 @@ export class ProductsService {
   public getProducts():productInterfase[]{
     return products;
   }
+
+  public getProduct(id:number):productInterfase{
+    let product:productInterfase =products.find(product => product.ProductID == id)!;
+    return product;
+  }
 }

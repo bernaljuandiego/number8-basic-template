@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+ 
   title = 'pys-angular';
 
   constructor(private dialog:MatDialog){
