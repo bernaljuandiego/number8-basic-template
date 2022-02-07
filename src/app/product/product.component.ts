@@ -19,7 +19,9 @@ export class ProductComponent implements OnInit {
   ) { }
 
   openDialog() {
-    this.dialog.open(DialogDataExampleDialog);
+    if(this.product.Stock! > 0){
+      this.dialog.open(DialogDataExampleDialog);
+    } 
   }
 
   ngOnInit(): void {
