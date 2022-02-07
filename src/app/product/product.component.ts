@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
  
   product!: productInterfase;
   fgh!: number;
+  bolShow = false;
   constructor(
     private ps: ProductsService,
     private route:ActivatedRoute,
@@ -33,7 +34,10 @@ export class ProductComponent implements OnInit {
     this.product = this.ps.getProduct(productId);
     const rating = this.product['Rating Avg'];
     this.fgh = Math.floor(rating!);
-    console.log(rating+"-"+this.product['Rating Avg']);
+    if(this.product.Stock! > 0){
+      this.bolShow=true;
+    }
+    console.log(this.bolShow);
   }
 }
 @Component({
