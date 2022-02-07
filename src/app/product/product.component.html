@@ -17,7 +17,8 @@
                         <h4 class="price">${{product?.Price}} <span>${{product['Retail Price']}}</span></h4>
                     </div>
                     <h3 class="red align-items-center">Out of Stock</h3>
-                    <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                    <button class="btn btn-success" mat-button (click)="openDialog()">Add to Cart</button>
+
                 </div>
             </div>
             <div class="row">

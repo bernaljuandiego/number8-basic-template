@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { productInterfase, ProductsService } from '../products.service';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-product',
@@ -13,8 +14,13 @@ export class ProductComponent implements OnInit {
   fgh!: number;
   constructor(
     private ps: ProductsService,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    public dialog: MatDialog
   ) { }
+
+  openDialog() {
+    this.dialog.open(DialogDataExampleDialog);
+  }
 
   ngOnInit(): void {
     this.loadProduct();
@@ -27,5 +33,12 @@ export class ProductComponent implements OnInit {
     this.fgh = Math.floor(rating!);
     console.log(rating+"-"+this.product['Rating Avg']);
   }
-
 }
+@Component({
+  selector: 'dialog-data-example-dialog',
+  templateUrl: 'dialog-data-example-dialog.html',
+})
+export class DialogDataExampleDialog {
+  constructor() {}
+}
+
