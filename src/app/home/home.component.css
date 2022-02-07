@@ -1,0 +1,37 @@
+
+.card {
+    border: none;
+    border-radius: 10px
+}
+
+.c-details span {
+    font-weight: 300;
+    font-size: 18px
+}
+
+.icon {
+    margin-left: 0.25rem;
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text1 {
+    font-size: 16px;
+}
+
+.text2 {
+    font-size: 12px;
+    color: #a5aec0;
+    text-decoration: line-through
+}
+
+@media (max-width: 600px) {
+    .boton1 {
+      margin-top: 1rem;
+    }
+  }
